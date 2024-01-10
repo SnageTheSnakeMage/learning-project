@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS inventory(
+    id NUMERIC(3) PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(40) NOT NULL,
+    location VARCHAR(40) NOT NULL,
+    dateObtained DATE NOT NULL
+);
