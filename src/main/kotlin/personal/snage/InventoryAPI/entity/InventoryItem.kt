@@ -12,6 +12,6 @@ data class InventoryItem(
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Int,
     var name: String,
-    var location: String,
+    var image: String,
     var dateObtained: Date
 )

@@ -41,7 +41,7 @@ class InventoryServiceImpl(
         }
         if(itemDTO.id == -1) throw IllegalArgumentException("Please provide the id of the item you are replacing")
         if (itemDTO.name == "default") itemDTO.name = getItem(itemDTO.id).name
-        if (itemDTO.location == "default") itemDTO.location = getItem(itemDTO.id).location
+        if (itemDTO.image == "") itemDTO.image = getItem(itemDTO.id).image
         if (itemDTO.dateObtained == Date.from(Instant.now())) itemDTO.dateObtained = getItem(itemDTO.id).dateObtained
         itemRespository.save(inventoryItemMapper.toEntity(itemDTO))
         return itemDTO
@@ -49,6 +49,7 @@ class InventoryServiceImpl(
 
     override fun deleteItem(id: Int) {
         if(!itemRespository.existsById(id)) throw IllegalArgumentException("Please provide the id of the item you are deleting")
+        itemRespository.deleteById(id)
     }
 
 }

@@ -9,7 +9,7 @@ class InventoryItemMapper: Mapper<InventoryItemDTO, InventoryItem> {
         return InventoryItemDTO(
             entity.id,
             entity.name,
-            entity.location,
+            entity.image,
             entity.dateObtained
         )
     }
@@ -18,7 +18,7 @@ class InventoryItemMapper: Mapper<InventoryItemDTO, InventoryItem> {
         return InventoryItem(
             domain.id,
             domain.name,
-            domain.location,
+            domain.image,
             domain.dateObtained
         )
     }
