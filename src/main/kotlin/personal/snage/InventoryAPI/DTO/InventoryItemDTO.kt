@@ -1,6 +1,5 @@
 package personal.snage.InventoryAPI.DTO
 
-import java.awt.Image
 import java.time.Instant
 import java.util.Date
 
